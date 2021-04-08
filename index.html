@@ -1,219 +1,669 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-   <meta charset="UTF-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title> 🎥 My Youtube 🎥 </title>
-   <link rel="preconnect" href="https://fonts.gstatic.com">
-   <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&display=swap" rel="stylesheet">    
-   <link rel="stylesheet" href="css/normalize.css">
-   <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-   <header class="header">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🎥 My Youtube 🎥</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="header">
       <button class="menu-btn">
-         <span class="menu-line"></span>
-         <span class="menu-line"></span>
-         <span class="menu-line"></span>
-      </button>  
+        <span class="menu-line"></span>
+        <span class="menu-line"></span>
+        <span class="menu-line"></span>
+      </button>
       <a href="#">
-         <img class="image-logo" src="images/logo.svg" alt="logo">
-      </a>   
-      
+        <img class="image-logo" src="images/logo.svg" alt="logo" />
+      </a>
+
       <div class="input-group">
-         <input class="input-search" type="search" name="search" placeholder="Search">
-         <button class="button-search" type="submit">
-            <svg class="icon icon-search" width='19' height='19'>
-               <use xlink:href="images/search.svg#search"></use>
-            </svg>
-         </button>
+        <input
+          class="input-search"
+          type="search"
+          name="search"
+          placeholder="Search"
+        />
+        <button class="button-search" type="submit">
+          <svg class="icon icon-search" width="19" height="19">
+            <use href="images/search.svg#search"></use>
+          </svg>
+        </button>
       </div>
 
       <!-- Иконки шапки -->
       <div class="icons">
-            <a href="#"class='icons-link'>
-               <svg class="icon icon-video" width='27' height='20'>
-                  <use xlink:href="images/search.svg#video-menu"></use>
-               </svg>
-            </a>
-            <a href="#"class='icons-link'>
-               <svg class="icon icon-app" width='21' height='21'>
-                  <use xlink:href="images/search.svg#app-menu"></use>
-               </svg>
-            </a>
-            <a href="#"class='icons-link'>
-               <svg class="icon icon-notification" width='22' height='26'>
-                  <use xlink:href="images/search.svg#notification-menu"></use>
-               </svg>
-            </a>
+        <a href="#" class="icons-link">
+          <svg class="icon icon-video" width="27" height="20">
+            <use href="images/search.svg#video-menu"></use>
+          </svg>
+        </a>
+        <a href="#" class="icons-link">
+          <svg class="icon icon-app" width="21" height="21">
+            <use href="images/search.svg#app-menu"></use>
+          </svg>
+        </a>
+        <a href="#" class="icons-link">
+          <svg class="icon icon-notification" width="22" height="26">
+            <use href="images/search.svg#notification-menu"></use>
+          </svg>
+        </a>
+        <a href="#" class="user">
+          <img src="images/user.jpg" class="user-avatar" alt="user-avatar" />
+        </a>
       </div>
+    </header>
+    <!-- конец шапки -->
 
-      <a href="#" class="user">
-         <img src="images/user.jpg" class="user-avatar" alt="user-avatar">
-      </a>
-   </header>
-   <!-- конец шапки -->
-
-   <div class="container">
+    <div class="container">
       <aside class="sidebar">
-         <nav class="nav">
-            <ul class="nav-menu">
-               <li class="nav-item">
-                  <a href="#" class="nav-link">
-                     <svg class="icon icon-home" width='20' height='20'>
-                        <use xlink:href="images/search.svg#home"></use>
-                     </svg>
-                     <span class="nav-text">Home</span>
-                  </a>
-               </li>
-               <li class="nav-item">
-                  <a href="#" class="nav-link">
-                     <svg class="icon icon-trending" width='20' height='20'>
-                        <use xlink:href="images/search.svg#trending"></use>
-                     </svg>
-                     <span class="nav-text">Trending</span>
-                  </a>
-               </li>
-               <li class="nav-item">
-                  <a href="#" class="nav-link">
-                     <svg class="icon icon-subscriptions" width='20' height='20'>
-                        <use xlink:href="images/search.svg#subscriptions"></use>
-                     </svg>
-                     <span class="nav-text">Subscriptions</span>
-                  </a>
-               </li>
-            </ul>
-
-
-            <!-- список 2 -->
-            <ul class="nav-menu">
-               <li class="nav-item">
-                     <a href="#" class="nav-link">
-                     <svg class="icon icon-library" width='20' height='20'>
-                        <use xlink:href="/images/search.svg#library"></use>
-                     </svg>
-                     <span class="nav-text">Library</span>
-                  </a>
-               </li>
-               <li class="nav-item">
-                  <a href="#" class="nav-link">
-                     <svg class="icon icon-history" width='20' height='20'>
-                        <use xlink:href="/images/search.svg#history"></use>
-                     </svg>
-                     <span class="nav-text">History</span>
-                  </a>
-               </li>
-               <li class="nav-item">
-                  <a href="#" class="nav-link">
-                     <svg class="icon icon-watch-later" width='20' height='20'>
-                        <use xlink:href="/images/search.svg#watch-later"></use>
-                     </svg>
-                     <span class="nav-text">Watch later</span>
-                  </a>
-               </li>
-               <li class="nav-item">
-                  <a href="#" class="nav-link">
-                     <svg class="icon icon-favourites" width='20' height='20'>
-                        <use xlink:href="/images/search.svg#favourites"></use>
-                     </svg>
-                     <span class="nav-text">Favourites</span>
-                  </a>
-               </li>
-               <li class="nav-item">
-                  <a href="#" class="nav-link">
-                     <svg class="icon icon-liked-videos" width='20' height='20'>
-                        <use xlink:href="/images/search.svg#liked-videos"></use>
-                     </svg>
-                     <span class="nav-text">Liked videos</span>
-                  </a>
-               </li>
-               <li class="nav-item">
-                  <a href="#" class="nav-link">
-                     <svg class="icon icon-music" width='20' height='20'>
-                        <use xlink:href="/images/search.svg#music"></use>
-                     </svg>
-                     <span class="nav-text">Music</span>
-                  </a>
-               </li>
-               <li class="nav-item">
-                  <a href="#" class="nav-link">
-                     <svg class="icon icon-games" width='20' height='20'>
-                        <use xlink:href="/images/search.svg#games"></use>
-                     </svg>
-                     <span class="nav-text">Games</span>
-                  </a>
-               </li>
-               <li class="nav-item">
-                  <a href="#" class="nav-link">
-                     <svg class="icon icon-show-more" width='20' height='20'>
-                        <use xlink:href="/images/search.svg#show-more"></use>
-                     </svg>
-                     <span class="nav-text">Show more</span>
-                  </a>
-               </li>
-            </ul>
-         </nav>
-
-
-            <!-- блок 3  -->
-            
-            
-            <h2 class="nav-title">Мои подписки</h2>
-               <ul class="nav-menu">
-                  <li class="nav-item">
-                     <a href="#" class="nav-link">
-                        <img src="images/user.jpg" alt="image" class="nav-image">
-                        <span class="nav-text">Gussie Singleton</span>
-                     </a>
-                  </li>
-                  <li class="nav-item">
-                     <a href="#" class="nav-link">
-                        <img src="images/user.jpg" alt="image" class="nav-image">
-                        <span class="nav-text">Nora Francis</span>
-                     </a>
-                  </li>
-                  <li class="nav-item">
-                     <a href="#" class="nav-link">
-                        <img src="images/user.jpg" alt="image" class="nav-image">
-                        <span class="nav-text">Belle Briggs</span>
-                     </a>
-                  </li>
-                  <li class="nav-item">
-                     <a href="#" class="nav-link">
-                        <img src="images/user.jpg" alt="image" class="nav-image">
-                        <span class="nav-text">Eunice Cortez</span>
-                     </a>
-                  </li>
-                  <li class="nav-item">
-                     <a href="#" class="nav-link">
-                        <img src="images/user.jpg" alt="image" class="nav-image">
-                        <span class="nav-text">Emma Hanson</span>
-                     </a>
-                  </li>
-                  <li class="nav-item">
-                     <a href="#" class="nav-link">
-                        <img src="images/user.jpg" alt="image" class="nav-image">
-                        <span class="nav-text">Leah Berry</span>
-                     </a>
-                  </li>
-               </ul>
-      <!-- settings -->
-      <ul class="nav-menu">
+        <nav class="nav">
+          <ul class="nav-menu">
             <li class="nav-item">
-               <a href="#" class="nav-link">
-                  <svg class="icon icon-setting" width='27' height='20'>
-                     <use xlink:href="images/search.svg#setting"></use>
-                  </svg>
-                  <span class="nav-text">Setting</span>
-               </a>
+              <a href="#" class="nav-link">
+                <svg class="icon icon-home" width="20" height="20">
+                  <use href="images/search.svg#home"></use>
+                </svg>
+                <span class="nav-text">Home</span>
+              </a>
             </li>
-         </ul>
-      
-      </aside>
-   </div>
-   <!-- конец container -->
-   
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <svg class="icon icon-trending" width="20" height="20">
+                  <use href="images/search.svg#trending"></use>
+                </svg>
+                <span class="nav-text">Trending</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <svg class="icon icon-subscriptions" width="20" height="20">
+                  <use href="images/search.svg#subscriptions"></use>
+                </svg>
+                <span class="nav-text">Subscriptions</span>
+              </a>
+            </li>
+          </ul>
 
-</body>
+          <!-- список 2 -->
+          <ul class="nav-menu">
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <svg class="icon icon-library" width="20" height="20">
+                  <use href="/images/search.svg#library"></use>
+                </svg>
+                <span class="nav-text">Library</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <svg class="icon icon-history" width="20" height="20">
+                  <use href="/images/search.svg#history"></use>
+                </svg>
+                <span class="nav-text">History</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <svg class="icon icon-watch-later" width="20" height="20">
+                  <use href="/images/search.svg#watch-later"></use>
+                </svg>
+                <span class="nav-text">Watch later</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <svg class="icon icon-favourites" width="20" height="20">
+                  <use href="/images/search.svg#favourites"></use>
+                </svg>
+                <span class="nav-text">Favourites</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <svg class="icon icon-liked-videos" width="20" height="20">
+                  <use href="/images/search.svg#liked-videos"></use>
+                </svg>
+                <span class="nav-text">Liked videos</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <svg class="icon icon-music" width="20" height="20">
+                  <use href="/images/search.svg#music"></use>
+                </svg>
+                <span class="nav-text">Music</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <svg class="icon icon-games" width="20" height="20">
+                  <use href="/images/search.svg#games"></use>
+                </svg>
+                <span class="nav-text">Games</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <svg class="icon icon-show-more" width="20" height="20">
+                  <use href="/images/search.svg#show-more"></use>
+                </svg>
+                <span class="nav-text">Show more</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- блок 3  -->
+
+        <h2 class="nav-title">Мои подписки</h2>
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <img src="images/user.jpg" alt="image" class="nav-image" />
+              <span class="nav-text">Gussie Singleton</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <img src="images/user.jpg" alt="image" class="nav-image" />
+              <span class="nav-text">Nora Francis</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <img src="images/user.jpg" alt="image" class="nav-image" />
+              <span class="nav-text">Belle Briggs</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <img src="images/user.jpg" alt="image" class="nav-image" />
+              <span class="nav-text">Eunice Cortez</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <img src="images/user.jpg" alt="image" class="nav-image" />
+              <span class="nav-text">Emma Hanson</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <img src="images/user.jpg" alt="image" class="nav-image" />
+              <span class="nav-text">Leah Berry</span>
+            </a>
+          </li>
+        </ul>
+        <!-- settings -->
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <svg class="icon icon-setting" width="27" height="20">
+                <use href="images/search.svg#setting"></use>
+              </svg>
+              <span class="nav-text">Setting</span>
+            </a>
+          </li>
+        </ul>
+      </aside>
+      <!-- конец сайдбара -->
+      <!-- ----------------------------------------------------------- -->
+      <!-- начало main -->
+      <main class="content">
+        <div class="chanell">
+          <a href="#" class="chanell-title">
+            <img src="images/user.jpg" alt="chanell" class="chanell-avatar" />
+            <span class="chanell-text">Dollie Blair</span>
+          </a>
+
+          <!--  navigation buttons -->
+          <div class="slider-buttons">
+            <div class="chanell-button-prev chanell-button">
+              <svg class="icon icon-left" width="28" height="28">
+                <use href="/images/search.svg#left"></use>
+              </svg>
+            </div>
+            <div class="chanell-button-next chanell-button">
+              <svg class="icon icon-right" width="28" height="28">
+                <use href="/images/search.svg#right"></use>
+              </svg>
+            </div>
+          </div>
+
+          <!-- слайдер -->
+          <div class="swiper-container chanell-slider">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+
+              <!-- 01 -->
+              <div class="swiper-slide">
+                <div class="video-card">
+                  <a href="#" class="video">
+                    <div class="video-thumb">
+                      <img
+                        src="images/cover-video.png"
+                        alt="video"
+                        class="thumbnail"
+                      />
+                      <span class="video-duration">4:15</span>
+                    </div>
+                    <h3 class="video-title">Asteroids</h3>
+                    <div class="video-info">
+                      <span class="video-counter">
+                        <span class="video-views">43k views</span>
+                        <span class="video-date">12 days ago</span>
+                      </span>
+                      <span class="video-chanell">Dollie Blair</span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+
+              <!-- /01 -->
+
+              <div class="swiper-slide">
+                <div class="video-card">
+                  <a href="#" class="video">
+                    <div class="video-thumb">
+                      <img
+                        src="images/dol-01.png"
+                        alt="video"
+                        class="thumbnail"
+                      />
+                      <span class="video-duration">6:25</span>
+                    </div>
+                    <h3 class="video-title">Что то</h3>
+                    <div class="video-info">
+                      <span class="video-counter">
+                        <span class="video-views">2k views</span>
+                        <span class="video-date">7 days ago</span>
+                      </span>
+                      <span class="video-chanell">Dollie Blair</span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="video-card">
+                  <a href="#" class="video">
+                    <div class="video-thumb">
+                      <img
+                        src="images/dol-02.png"
+                        alt="video"
+                        class="thumbnail"
+                      />
+                      <span class="video-duration">1:25</span>
+                    </div>
+                    <h3 class="video-title">Пустыня</h3>
+                    <div class="video-info">
+                      <span class="video-counter">
+                        <span class="video-views">48k views</span>
+                        <span class="video-date">22 days ago</span>
+                      </span>
+                      <span class="video-chanell">Dollie Blair</span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="video-card">
+                  <a href="#" class="video">
+                    <div class="video-thumb">
+                      <img
+                        src="images/dol-03.png"
+                        alt="video"
+                        class="thumbnail"
+                      />
+                      <span class="video-duration">8:01</span>
+                    </div>
+                    <h3 class="video-title">Стенка</h3>
+                    <div class="video-info">
+                      <span class="video-counter">
+                        <span class="video-views">8k views</span>
+                        <span class="video-date">5 days ago</span>
+                      </span>
+                      <span class="video-chanell">Dollie Blair</span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="video-card">
+                  <a href="#" class="video">
+                    <div class="video-thumb">
+                      <img
+                        src="images/dol-04.png"
+                        alt="video"
+                        class="thumbnail"
+                      />
+                      <span class="video-duration">10:15</span>
+                    </div>
+                    <h3 class="video-title">Красивая лавочка</h3>
+                    <div class="video-info">
+                      <span class="video-counter">
+                        <span class="video-views">433k views</span>
+                        <span class="video-date">12 days ago</span>
+                      </span>
+                      <span class="video-chanell">Dollie Blair</span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="video-card">
+                  <a href="#" class="video">
+                    <div class="video-thumb">
+                      <img
+                        src="images/dol-05.png"
+                        alt="video"
+                        class="thumbnail"
+                      />
+                      <span class="video-duration">3:15</span>
+                    </div>
+                    <h3 class="video-title">дороги Украины</h3>
+                    <div class="video-info">
+                      <span class="video-counter">
+                        <span class="video-views">4k views</span>
+                        <span class="video-date">1 days ago</span>
+                      </span>
+                      <span class="video-chanell">Dollie Blair</span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- конец слайдера -->
+        </div>
+
+        <!-- recommended-slider -->
+
+        <div class="chanell">
+          <a href="#" class="chanell-title">
+            <span class="chanell-text">Recommended</span>
+          </a>
+          <!--  navigation buttons -->
+          <div class="slider-buttons">
+            <div class="recommended-slider-prev chanell-button">
+              <svg class="icon icon-left" width="28" height="28">
+                <use href="/images/search.svg#left"></use>
+              </svg>
+            </div>
+            <div class="recommended-slider-next chanell-button">
+              <svg class="icon icon-right" width="28" height="28">
+                <use href="/images/search.svg#right"></use>
+              </svg>
+            </div>
+          </div>
+          <!-- слайдер -->
+          <div class="swiper-container recommended-slider">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <!-- 01 -->
+              <div class="swiper-slide">
+                <div class="video-card-3">
+                  <a href="#" class="video">
+                    <div class="video-thumb-3">
+                      <img
+                        src="images/rek-01.png"
+                        alt="video"
+                        class="thumbnail-3"
+                      />
+                      <span class="video-duration">3:40</span>
+                    </div>
+                    <h3 class="video-title">Dude You Re Getting A Telescope</h3>
+                    <div class="video-info">
+                      <span class="video-counter">
+                        <span class="video-views">34k views</span>
+                        <span class="video-date">5 days ago</span>
+                      </span>
+                      <span class="video-chanell">Gussie French</span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <!-- /01 -->
+              <div class="swiper-slide">
+                <div class="video-card-3">
+                  <a href="#" class="video">
+                    <div class="video-thumb-3">
+                      <img
+                        src="images/rek-02.png"
+                        alt="video"
+                        class="thumbnail-3"
+                      />
+                      <span class="video-duration">2:12</span>
+                    </div>
+                    <h3 class="video-title">Moon Gazing</h3>
+                    <div class="video-info">
+                      <span class="video-counter">
+                        <span class="video-views">54k views</span>
+                        <span class="video-date">11 days ago</span>
+                      </span>
+                      <span class="video-chanell">Edward Osborne</span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="video-card-3">
+                  <a href="#" class="video">
+                    <div class="video-thumb-3">
+                      <img
+                        src="images/rek-03.png"
+                        alt="video"
+                        class="thumbnail-3"
+                      />
+                      <span class="video-duration">2:99</span>
+                    </div>
+                    <h3 class="video-title">Moon Gazing</h3>
+                    <div class="video-info">
+                      <span class="video-counter">
+                        <span class="video-views">125k views</span>
+                        <span class="video-date">4 days ago</span>
+                      </span>
+                      <span class="video-chanell">Dollie Blair</span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- конец слайдера -->
+        </div>
+
+        <!-- food & drink -->
+        <div class="chanell">
+          <a href="#" class="chanell-title">
+            <img src="images/Oval.png" alt="chanell" class="chanell-avatar" />
+            <span class="chanell-text">Food & Drink</span>
+            <span class="recommendet-text">Recommended channel for you</span>
+            <button class="recommendet-btn">Subscribe 2.3m</button>
+          </a>
+
+          <!--  navigation buttons -->
+          <div class="slider-buttons">
+            <div class="food-Drink-prev chanell-button">
+              <svg class="icon icon-left" width="28" height="28">
+                <use href="/images/search.svg#left"></use>
+              </svg>
+            </div>
+            <div class="food-Drink-next chanell-button">
+              <svg class="icon icon-right" width="28" height="28">
+                <use href="/images/search.svg#right"></use>
+              </svg>
+            </div>
+          </div>
+
+          <!-- слайдер -->
+          <div class="swiper-container food-Drink">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+
+              <!-- 01 -->
+              <div class="swiper-slide">
+                <div class="video-card">
+                  <a href="#" class="video">
+                    <div class="video-thumb">
+                      <img
+                        src="https://s3-alpha-sig.figma.com/img/1b4e/e8dc/89ffe7754bf05c036c0012ad1e127ab9?Expires=1618790400&Signature=JwskDwJrn195TuF39sDD225DBbgXHkgRI9Bi4eZt2QpnG98TyTSt2WH~duilw-VZp0qAQYF9EOabDrjIsp6UNeywNHGhY7GonnE~-57umHrxkibQjY8mNCmOBfz2oXeo-~C7fwv9C58qRvhZBUWpfZn5XdT8zVRuhIFBMP41D1vcJYkHiqXminYTYGLYhN2e1biD-C0fHTEk~14-JwnPtD9n-tnQVEG05-VORmh6Z65uWSzLcgHlSbf9XakhSX2EYXcqPgboFUWL4VMSoQnlweEqQrMS0Q4hNBYr8oL8qHwcBdPTi8C4z3Vx49bbXe-OYsS0R9Y2fniGbididQhecw__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"
+                        alt="video"
+                        class="thumbnail"
+                      />
+                      <span class="video-duration">4:15</span>
+                    </div>
+                    <h3 class="video-title">Asteroids</h3>
+                    <div class="video-info">
+                      <span class="video-counter">
+                        <span class="video-views">43k views</span>
+                        <span class="video-date">12 days ago</span>
+                      </span>
+                      <span class="video-chanell">Dollie Blair</span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+
+              <!-- /01 -->
+
+              <div class="swiper-slide">
+                <div class="video-card">
+                  <a href="#" class="video">
+                    <div class="video-thumb">
+                      <img
+                        src="https://s3-alpha-sig.figma.com/img/eb2f/d0ec/1c40f673fb956c7013f64192bed723ad?Expires=1618790400&Signature=dWXRn0cIqry4MHqJSdNLbTPacG26NwDACOt5MNonYWEzKmgjWKD01n~wubsmIaaboNUGdnO7XdcKlslwJ--nm84L7SPmAklSqzrImjNPXR~7WoLPCttyCbgobeGONaA8fy1~nMhdLtRVH9gwPLZK4PtIgBCFk2fAVYt1AdC~IEbzQcJNSHJDkmRHWo~yMj5B0DC27qng6c8s2hZ0yTqXc7Q0TSXsmBAkbGAOhxk9~aAVMsVs3~xaMNgEOBbdSmfqZa4CYWK4fC~3iT93ZZ~e3JM2gJ-FSXDObMRAt9V41Puvs34kth~VJHkRLVppHJ7dDlSl7WQJH18E0ipiNNgw4Q__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"
+                        alt="video"
+                        class="thumbnail"
+                      />
+                      <span class="video-duration">4:15</span>
+                    </div>
+                    <h3 class="video-title">Asteroids</h3>
+                    <div class="video-info">
+                      <span class="video-counter">
+                        <span class="video-views">43k views</span>
+                        <span class="video-date">12 days ago</span>
+                      </span>
+                      <span class="video-chanell">Dollie Blair</span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="video-card">
+                  <a href="#" class="video">
+                    <div class="video-thumb">
+                      <img
+                        src="https://s3-alpha-sig.figma.com/img/95a6/5373/dbf7a16f622a33e17d214769821c186f?Expires=1618790400&Signature=EkDXEQdvKmv2HOqSWBBJj30Dl9TDsj9bQv1M2YXeFdyQE5vvVgOmYshfLqEjstbvPK1g1Cs4tRebeQJHSDR1o-I3Vc8bd2W0QpPKGur1OyCHfy3sAIN5Y4xa61GPnLC-I8oNti~t1amrNU41RByNHYMbPJyPEswNFh0nzFX5v1j~1xJ-sgF5PnttcPwHXrCPVNMfjzY-YhaNukehZuzT2DSCTY0XcANfbz1yQ-4Lh7t2Zm3PDH~kUh4CSWvZzEtPe6lCht64j1p~q8Bl2-GynerTmLfcrBSalcn2ibJVnvXvBjqhfzSnIrT-jyGzm-xRT-7GmG840HId5f6kayukQg__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"
+                        alt="video"
+                        class="thumbnail"
+                      />
+                      <span class="video-duration">4:15</span>
+                    </div>
+                    <h3 class="video-title">Asteroids</h3>
+                    <div class="video-info">
+                      <span class="video-counter">
+                        <span class="video-views">43k views</span>
+                        <span class="video-date">12 days ago</span>
+                      </span>
+                      <span class="video-chanell">Dollie Blair</span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="video-card">
+                  <a href="#" class="video">
+                    <div class="video-thumb">
+                      <img
+                        src="https://s3-alpha-sig.figma.com/img/2f59/e882/1cc6e0b8e432980436f6b9ffd9f43edc?Expires=1618790400&Signature=Utr~QFvwgETC9uxKUIFCVkz32SF8fm6OLy7AIhIVztsgcdBWwwA~4NjXTy9iiDJw0Z7xqGtDoJ3lXl5XkSbSpUvNNoxscAeBRN4VWT-qkCOADsWnv5EwDcH7kIWI9JLEVxubce1ohj5Jq0oKoqgOnWHZ77TUWQuXdi4nmY5KPzDCmF4oLSLm3ivjPMPy5tDvIbNvXG1bvPz83R86IZKGNWtXHYLgd8BXj-BmloY08heVTMFfS3s2vFEgEFmof17s8sHHMrpEdHx1bX0yBa0C0BtlEe4Jz7SzMrV4gASVnj6BZTcv8MWMA-ap-EustB6fUr6ZQA1diNTBc2jPTkDUDw__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"
+                        alt="video"
+                        class="thumbnail"
+                      />
+                      <span class="video-duration">4:15</span>
+                    </div>
+                    <h3 class="video-title">Asteroids</h3>
+                    <div class="video-info">
+                      <span class="video-counter">
+                        <span class="video-views">43k views</span>
+                        <span class="video-date">12 days ago</span>
+                      </span>
+                      <span class="video-chanell">Dollie Blair</span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="video-card">
+                  <a href="#" class="video">
+                    <div class="video-thumb">
+                      <img
+                        src="https://s3-alpha-sig.figma.com/img/efab/1512/4b8d491e7d8d6e73459da70a147410aa?Expires=1618790400&Signature=Cs2WZnFv5BVHnWNcQVqNZTQs1BMm6dBAasCZeYMSZLYZkBPMigQ4RxBjmcheaWx8Y9wZ6iLcF5jGL905soP~ARQyCKbfw9RuB-P~FuLw0zUp7yTe692hY0j3xqq40rqKgGAstcrfjQibYQPpbVmx7pM0eN~ciQTZo1H4cu0pVBR-5nEG66U~ICqbN2xD6f1oqJTHGbRGL1SmQfsUmD3OijToUhDh77ftWMf2WwJbC7AoeBOyiZoD4Pkusy8E5aWK-yEWVODba8U1Eq~7kCh0GJC94o84OSuiWLorCR5~P4S~s7BF3adUjNznVKNQsdwIX3wVr5-mLH~tX4LivdFtmw__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"
+                        alt="video"
+                        class="thumbnail"
+                      />
+                      <span class="video-duration">4:15</span>
+                    </div>
+                    <h3 class="video-title">Asteroids</h3>
+                    <div class="video-info">
+                      <span class="video-counter">
+                        <span class="video-views">43k views</span>
+                        <span class="video-date">12 days ago</span>
+                      </span>
+                      <span class="video-chanell">Dollie Blair</span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="video-card">
+                  <a href="#" class="video">
+                    <div class="video-thumb">
+                      <img
+                        src="https://s3-alpha-sig.figma.com/img/0d6a/7986/203d1247bf97c8efb6258b31cf102862?Expires=1618790400&Signature=HbcUZAuxw7p-KPd2p4sPc0uis756T3SlG24TDGfUqI9pjZoWHZx-DLgPHP0t6Vm4zNxEA7EFbcmbc91OoLd9r50-qE7i3BwocL64YG857uZPN01OojySe2UtjCCANjq9x-PzA8rchAGPezHSZ-fGx~HISfBHXFZMM5rFIjV2iBakQ3iIw813wv0YzefWgi1vpofvM-xCIqAUUt4SBb-NpkcfeOedlkF9TdJF2cUmGgIA0Ca9b9IAk8v-rY287-BHTnn~I-a3k8jCNifWyUS9xmCWCpNuMRLm8RIksmiKTHgt7vBKtZ~EXjvlyWYlmU5U9SlNhJRoDAHc4pI2-GMsHg__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"
+                        alt="video"
+                        class="thumbnail"
+                      />
+                      <span class="video-duration">4:15</span>
+                    </div>
+                    <h3 class="video-title">Asteroids</h3>
+                    <div class="video-info">
+                      <span class="video-counter">
+                        <span class="video-views">43k views</span>
+                        <span class="video-date">12 days ago</span>
+                      </span>
+                      <span class="video-chanell">Dollie Blair</span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- конец слайдера -->
+        </div>
+      </main>
+      <!-- конец main -->
+    </div>
+    <!-- конец container -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
 </html>
